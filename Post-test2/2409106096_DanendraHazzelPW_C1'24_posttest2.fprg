@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106096_DanendraHazzelPW_C1'24_posttest2"/>
+        <attribute name="authors" value="asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 02.02.38 PM"/>
+        <attribute name="created" value="YXN1cztMQVBUT1AtU1NWMkJWTEs7MjAyNC0wOS0xNjswMS4wOC40MCBQTTsyODE1"/>
+        <attribute name="edited" value="YXN1cztMQVBUT1AtU1NWMkJWTEs7MjAyNC0wOS0xNzswMi4wMi4zOCBQTTs2OzI5MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, NIM" type="String" array="False" size=""/>
+            <output expression="&quot;masukkan nama&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;masukkan NIM&quot;" newline="True"/>
+            <input variable="NIM"/>
+            <declare name="HargaGula" type="Integer" array="False" size=""/>
+            <declare name="diskonGulaku, diskonManisKita, diskonGunungMadu" type="Real" array="False" size=""/>
+            <declare name="HargaAkhirGulaku, HargaAkhirManisKita, HargaAkhirGunungMadu" type="Real" array="False" size=""/>
+            <output expression="&quot;HargaGula&quot;" newline="True"/>
+            <input variable="HargaGula"/>
+            <assign variable="diskonGulaku" expression="HargaGula*0.07"/>
+            <assign variable="diskonManisKita" expression="HargaGula*0.11"/>
+            <assign variable="diskonGunungMadu" expression="HargaGula*0.13"/>
+            <assign variable="HargaAkhirGulaku" expression="HargaGula-diskonGulaku"/>
+            <assign variable="HargaAkhirManisKita" expression="HargaGula-diskonManisKita"/>
+            <assign variable="HargaAkhirGunungMadu" expression="HargaGula-diskonGunungMadu"/>
+            <output expression="&quot;Gulaku&quot; &amp; HargaAkhirGulaku" newline="True"/>
+            <output expression="&quot;ManisKita&quot; &amp; HargaAkhirManisKita" newline="True"/>
+            <output expression="&quot;GunungMadu&quot; &amp; HargaAkhirGunungMadu" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
