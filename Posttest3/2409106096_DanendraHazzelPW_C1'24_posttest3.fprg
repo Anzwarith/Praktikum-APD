@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106096_DanendraHazzelPW_C1'24_posttest3"/>
+        <attribute name="authors" value="asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-23 07.21.07 PM"/>
+        <attribute name="created" value="YXN1cztMQVBUT1AtU1NWMkJWTEs7MjAyNC0wOS0yMTswNy40Mi41OSBQTTsyODI1"/>
+        <attribute name="edited" value="YXN1cztMQVBUT1AtU1NWMkJWTEs7MjAyNC0wOS0yMzswNy4yMS4wNyBQTTs2OzI5MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, hari, film" type="String" array="False" size=""/>
+            <declare name="jumlahuang, hargatiket" type="Real" array="False" size=""/>
+            <output expression="&quot;Selamat datang pada pemesanan tiket online, ingin menonton film apa?&quot;" newline="True"/>
+            <output expression="&quot;1.Dragon ball 2.Battle Z 3.Ben 10&quot;" newline="True"/>
+            <input variable="film"/>
+            <output expression="&quot;Silahkan isi nama anda disini&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;Ingin menonton di hari apa&quot;" newline="True"/>
+            <input variable="hari"/>
+            <output expression="&quot;masukkan uang anda&quot;" newline="True"/>
+            <input variable="jumlahuang"/>
+            <if expression="hari == &quot;senin&quot;||&#13;&#10;hari == &quot;selasa&quot;||&#13;&#10;hari == &quot;rabu&quot;||&#13;&#10;hari == &quot;kamis&quot;">
+                <then>
+                    <assign variable="hargatiket" expression="40000"/>
+                </then>
+                <else>
+                    <if expression="hari == &quot;jumaat&quot;">
+                        <then>
+                            <assign variable="hargatiket" expression="45000"/>
+                        </then>
+                        <else>
+                            <if expression="hari == &quot;sabtu&quot;">
+                                <then>
+                                    <assign variable="hargatiket" expression="55000"/>
+                                </then>
+                                <else>
+                                    <if expression="hari == &quot;minggu&quot;">
+                                        <then>
+                                            <assign variable="hargatiket" expression="60000"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="jumlahuang &gt;= hargatiket">
+                <then>
+                    <output expression="&quot;Pemesanan atas nama &quot; &amp;nama &amp; &quot; pada hari &quot; &amp; hari &amp; &quot; telah berhasil dilakukan&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;maaf uang anda tidak cukup untuk menonton film yang anda inginkan pada hari &quot; &amp; hari" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
